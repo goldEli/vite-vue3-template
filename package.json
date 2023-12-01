@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "vite-plugin-console-helper": "^1.0.2",
     "vue": "^3.3.8",
     "vue-router": "4"
   },
