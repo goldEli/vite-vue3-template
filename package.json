@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:dev": "vue-tsc && vite build --mode dev", 
+    "build:test": "vue-tsc && vite build --mode test", 
+    "build:production": "vue-tsc && vite build --mode production" 
   },
   "dependencies": {
     "vite-plugin-console-helper": "^1.0.2",
