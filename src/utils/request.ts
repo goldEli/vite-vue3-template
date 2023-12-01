@@ -9,9 +9,9 @@ interface ApiResponse<T> {
 
 // 创建请求实例
 const instance = axios.create({
-  baseURL: "/api",
+  baseURL: "",
   // 指定请求超时的毫秒数
-  timeout: 1000,
+  timeout: 3000,
   // 表示跨域请求时是否需要使用凭证
   withCredentials: false,
 });
@@ -54,10 +54,7 @@ instance.interceptors.response.use(
 );
 
 // 定义通用的请求方法
-async function request<T>(
-  url: string,
-  options?: AxiosRequestConfig
-) {
+async function request<T>(options?: AxiosRequestConfig & { url: string }) {
   try {
     // 设置默认配置
     const defaultOptions: AxiosRequestConfig = {
@@ -75,7 +72,7 @@ async function request<T>(
     // 发送请求
     const response: AxiosResponse<ApiResponse<T>> = await instance<
       ApiResponse<T>
-    >({ ...requestOptions, url });
+    >({ ...requestOptions });
     return response;
 
     // // 检查是否成功请求 (状态码 200-299)
