@@ -5,10 +5,10 @@ import { infoList } from "@/_api/assetsAsset/infoList";
 infoList({ assetCode: "123" });
 </script>
 <template>
-  <div :class="$style.container">
+  <!-- <div :class="$style.container">
     <div :class="$style.box"></div>
     home
-  </div>
+  </div> -->
 </template>
 <style module lang="less">
 .container {

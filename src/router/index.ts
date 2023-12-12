@@ -18,6 +18,11 @@ const routes: RouteRecordRaw[] = [
     name: "about",
     component: () => import("@/views/about/index.vue"),
   },
+  {
+    path: "/addStaff",
+    name: "addStaff",
+    component: () => import("@/views/addStaff/index.vue"),
+  },
 ];
 
 // RouterOptions是路由选项类型
