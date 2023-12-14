@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BasicInfo from "./BasicInfo.vue";
 import PersonalInfo from "./PersonalInfo.vue";
+import BankInfo from "./BankInfo.vue";
 
 const onSubmit = (values: any) => {
   console.log("submit", values);
@@ -15,6 +16,7 @@ const onSubmit = (values: any) => {
       <div :class="$style.title">个人信息</div>
       <PersonalInfo />
       <div :class="$style.title">银行卡信息</div>
+      <BankInfo />
       <div :class="$style.title">工作经历</div>
       <div :class="$style.title">承诺</div>
       <div style="margin: 16px">
