@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import FormDatePicker from "./components/FormDatePicker.vue";
+import FormRadio from "./components/FormRadio.vue";
 
 const idCardName = ref("张三");
 const idCard = ref("");
@@ -30,16 +31,33 @@ const politicalLandscape = ref("");
       name="currentResidence"
       label="现住址"
     />
-    <van-field
+
+    <FormRadio
       v-model="registeredResidenceType"
       name="registeredResidenceType"
       label="户籍类型"
+      :options="[
+        { label: '农村', value: 1 },
+        { label: '城镇', value: 2 },
+      ]"
     />
-    <van-field v-model="maritalStatus" name="maritalStatus" label="婚姻状态" />
-    <van-field
+    <FormRadio
+      v-model="maritalStatus"
+      name="maritalStatus"
+      label="婚姻状态"
+      :options="[
+        { label: '已婚', value: 1 },
+        { label: '未婚', value: 2 },
+      ]"
+    />
+    <FormRadio
       v-model="politicalLandscape"
       name="politicalLandscape"
       label="政治面貌"
+      :options="[
+        { label: '党员', value: 1 },
+        { label: '群众', value: 2 },
+      ]"
     />
     <!-- <van-field name="gender" label="性别" :rules="[{ required: true, message: '请选择性别' }]">
       <template #input>
