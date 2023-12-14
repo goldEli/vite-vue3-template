@@ -1,3 +1,13 @@
+@font-face {
+  font-family: SiYuanMedium;
+  src: url(./assets/font/MiSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: SiYuanRegular;
+  src: url(./assets/font/MiSans-Normal.ttf);
+}
+
 #app {
   /* max-width: 1280px; */
 }
@@ -6,6 +16,7 @@
   padding: 0;
   margin: 0;
   font-size: 14px;
+  font-family: SiYuanRegular;
 }
 
 /* @media (prefers-color-scheme: light) {
