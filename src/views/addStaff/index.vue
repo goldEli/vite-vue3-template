@@ -3,7 +3,7 @@ import BasicInfo from "./BasicInfo.vue";
 import PersonalInfo from "./PersonalInfo.vue";
 import BankInfo from "./BankInfo.vue";
 import WorkInfo from "./WorkInfo.vue";
-import { ref,  unref } from "vue";
+import { ref } from "vue";
 
 const workInfo = ref([{}]);
 const onSubmit = (values: any) => {
