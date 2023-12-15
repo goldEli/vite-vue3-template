@@ -3,7 +3,7 @@
   @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd"></canvas>
 </template>
 
-<script>
+<script >
 export default {
   props: {
     width: {

@@ -11,7 +11,7 @@ onMounted(() => {
 });
 watch(show, (v) => {
   if (v) {
-    signRef?.value?.reset?.()
+    signRef?.value?.reset?.();
     return;
   }
   signRef.value.generate().then((res: any) => {
@@ -24,6 +24,7 @@ watch(show, (v) => {
 </script>
 <template>
   <van-field
+    :class="$style.sign"
     v-model="signPic"
     readonly
     input-align="right"
@@ -56,5 +57,10 @@ watch(show, (v) => {
 <style module lang="less">
 .container {
   padding: 16px;
+}
+.sign {
+  input {
+    display: none;
+  }
 }
 </style>
