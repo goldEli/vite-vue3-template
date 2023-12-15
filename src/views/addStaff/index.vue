@@ -3,6 +3,7 @@ import BasicInfo from "./BasicInfo.vue";
 import PersonalInfo from "./PersonalInfo.vue";
 import BankInfo from "./BankInfo.vue";
 import WorkInfo from "./WorkInfo.vue";
+import EducationInfo from "./EducationInfo.vue";
 
 const onSubmit = (values: any) => {
   console.log(values);
@@ -19,6 +20,7 @@ const onSubmit = (values: any) => {
       <div :class="$style.title">银行卡信息</div>
       <BankInfo />
       <div :class="$style.title">教育信息</div>
+      <EducationInfo />
       <div :class="$style.title">工作经历</div>
       <WorkInfo />
       <div :class="$style.title">承诺</div>
