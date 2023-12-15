@@ -1,7 +1,10 @@
 <script setup lang="ts">
 // import { Signature } from "vant";
-import { onMounted, ref, watch } from "vue";
-import Sign from "./Sign.vue";
+import { onMounted, reactive, ref, watch } from "vue";
+// import Sign from "./Sign.vue";
+import Vue3Signature from "vue3-signature";
+
+import { pxToVW } from "@/utils/pxToVW";
 
 const signPic = ref("");
 const show = ref(false);
@@ -11,12 +14,18 @@ onMounted(() => {
 });
 watch(show, (v) => {
   if (v) {
-    signRef?.value?.reset?.();
+    signRef?.value?.clear?.();
     return;
   }
-  signRef.value.generate().then((res: any) => {
-    signPic.value = res;
-  });
+  signPic.value = signRef.value.save("image/jpeg");
+});
+const state = reactive({
+  count: 0,
+  option: {
+    penColor: "rgb(0, 0, 0)",
+    backgroundColor: "rgb(255,255,255)",
+  },
+  disabled: false,
 });
 // const formatter = () => {
 //   return ''
@@ -51,10 +60,20 @@ watch(show, (v) => {
   <van-dialog v-model:show="show" title="签名" show-cancel-button>
     <!-- <img src="https://fastly.jsdelivr.net/npm/@vant/assets/apple-3.jpeg" /> -->
     <!-- <Signature /> -->
-    <Sign ref="signRef" />
+    <!-- <Sign ref="signRef" /> -->
+    <Vue3Signature
+      ref="signRef"
+      :sigOption="state.option"
+      :disabled="state.disabled"
+      :h="pxToVW(120)"
+      :class="$style.example"
+    ></Vue3Signature>
   </van-dialog>
 </template>
 <style module lang="less">
+.example {
+  margin: 0 auto;
+}
 .container {
   padding: 16px;
 }

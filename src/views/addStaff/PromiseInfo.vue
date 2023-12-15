@@ -6,7 +6,7 @@ import { ref } from "vue";
 import ESignature from "./components/ESignature.vue"
 
 const createTime = ref("");
-const signPic = ref("")
+// const signPic = ref("")
 </script>
 <template>
   <div :class="$style.container">

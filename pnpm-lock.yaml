@@ -14,6 +14,9 @@ dependencies:
   postcss-px-to-viewport:
     specifier: ^1.1.1
     version: 1.1.1
+  signature_pad:
+    specifier: ^4.1.7
+    version: 4.1.7
   vant:
     specifier: ^4.8.0
     version: 4.8.0(vue@3.3.9)
@@ -26,6 +29,9 @@ dependencies:
   vue-router:
     specifier: '4'
     version: 4.2.5(vue@3.3.9)
+  vue3-signature:
+    specifier: ^0.2.3
+    version: 0.2.3(typescript@5.3.2)
 
 devDependencies:
   '@vant/auto-import-resolver':
@@ -1365,6 +1371,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /default-passive-events@2.0.0:
+    resolution: {integrity: sha512-eMtt76GpDVngZQ3ocgvRcNCklUMwID1PaNbCNxfpDXuiOXttSh0HzBbda1HU9SIUsDc02vb7g9+3I5tlqe/qMQ==}
+    dev: false
+
   /defu@6.1.3:
     resolution: {integrity: sha512-Vy2wmG3NTkmHNg/kzpuvHhkqeIx3ODWqasgCRbKtbXEN0G+HpEEv9BtJLp7ZG1CZloFaC41Ah3ZFbq7aqCqMeQ==}
     dev: false
@@ -2449,6 +2459,14 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /signature_pad@3.0.0-beta.4:
+    resolution: {integrity: sha512-cOf2NhVuTiuNqe2X/ycEmizvCDXk0DoemhsEpnkcGnA4kS5iJYTCqZ9As7tFBbsch45Q1EdX61833+6sjJ8rrw==}
+    dev: false
+
+  /signature_pad@4.1.7:
+    resolution: {integrity: sha512-2Vmybep25VlDnvdgtE3v09KGawS8mL10lRpSq1RmPpLcS4eH8I1YPQUzXsxwnmepcAgDHQ2jyzgS6XhjKsYYAQ==}
+    dev: false
+
   /slash@4.0.0:
     resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
     engines: {node: '>=12'}
@@ -2788,6 +2806,16 @@ packages:
       semver: 7.5.4
       typescript: 5.3.2
     dev: true
+
+  /vue3-signature@0.2.3(typescript@5.3.2):
+    resolution: {integrity: sha512-sKph9Y0Dj7jPtBWfRNiVngsI0S9+hBHNa3jghY38Z+F3DtqQGtnoLGVNLte7pfJMXuKdMCn0dP5p2ZJByMQ3Vw==}
+    dependencies:
+      default-passive-events: 2.0.0
+      signature_pad: 3.0.0-beta.4
+      vue: 3.3.9(typescript@5.3.2)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /vue@3.3.9(typescript@5.3.2):
     resolution: {integrity: sha512-sy5sLCTR8m6tvUk1/ijri3Yqzgpdsmxgj6n6yl7GXXCXqVbmW2RCXe9atE4cEI6Iv7L89v5f35fZRRr5dChP9w==}
