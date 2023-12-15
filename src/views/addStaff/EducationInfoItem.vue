@@ -16,7 +16,9 @@ const typeOfEducation = ref("");
 const majorAreaOfStudy = ref("");
 const canItBeChecked = ref("");
 const additionalInformation = ref("");
-const educationalCertificate = ref("");
+const educationalCertificate = ref([
+  { url: "https://fastly.jsdelivr.net/npm/@vant/assets/leaf.jpeg" },
+]);
 const towOneOneAndNineEightFive = ref("");
 
 const key = "educationInfo";
@@ -79,11 +81,15 @@ const key = "educationInfo";
         :name="`${key}-${props.idx}-additionalInformation`"
         label="备注信息"
       />
+
       <van-field
-        v-model="educationalCertificate"
         :name="`${key}-${props.idx}-educationalCertificate`"
         label="学历证书"
-      />
+      >
+        <template #input>
+          <van-uploader v-model="educationalCertificate" />
+        </template>
+      </van-field>
     </van-cell-group>
   </div>
 </template>
