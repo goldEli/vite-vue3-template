@@ -25,7 +25,7 @@ const achievement = ref("");
       />
       <van-field
         v-model="job"
-        name="`workInfo-${props.idx}-companyName`job"
+        :name="`workInfo-${props.idx}-job`"
         label="职位"
       />
       <FormDatePicker
