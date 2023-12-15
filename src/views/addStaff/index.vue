@@ -4,6 +4,7 @@ import PersonalInfo from "./PersonalInfo.vue";
 import BankInfo from "./BankInfo.vue";
 import WorkInfo from "./WorkInfo.vue";
 import EducationInfo from "./EducationInfo.vue";
+import PromiseInfo from "./PromiseInfo.vue";
 
 const onSubmit = (values: any) => {
   console.log(values);
@@ -24,6 +25,7 @@ const onSubmit = (values: any) => {
       <div :class="$style.title">工作经历</div>
       <WorkInfo />
       <div :class="$style.title">承诺</div>
+      <PromiseInfo />
       <div style="margin: 16px">
         <van-button round block type="primary" native-type="submit">
           提交
