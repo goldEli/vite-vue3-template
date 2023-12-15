@@ -3,7 +3,7 @@ import { ref } from "vue";
 import FormDatePicker from "./components/FormDatePicker.vue";
 
 interface Props {
-  idx: number;
+  idx: string;
 }
 const props = withDefaults(defineProps<Props>(), {});
 

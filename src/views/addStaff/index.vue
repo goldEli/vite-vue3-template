@@ -3,11 +3,9 @@ import BasicInfo from "./BasicInfo.vue";
 import PersonalInfo from "./PersonalInfo.vue";
 import BankInfo from "./BankInfo.vue";
 import WorkInfo from "./WorkInfo.vue";
-import { ref } from "vue";
 
-const workInfo = ref([{}]);
 const onSubmit = (values: any) => {
-  console.log(values, workInfo.value);
+  console.log(values);
 };
 </script>
 <template>
@@ -22,7 +20,7 @@ const onSubmit = (values: any) => {
       <BankInfo />
       <div :class="$style.title">教育信息</div>
       <div :class="$style.title">工作经历</div>
-      <WorkInfo v-model="workInfo" />
+      <WorkInfo />
       <div :class="$style.title">承诺</div>
       <div style="margin: 16px">
         <van-button round block type="primary" native-type="submit">
