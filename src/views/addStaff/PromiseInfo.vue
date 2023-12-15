@@ -2,8 +2,11 @@
 import Gap from "@/components/Gap.vue";
 import FormDatePicker from "./components/FormDatePicker.vue";
 import { ref } from "vue";
+// import { Signature } from "vant";
+import ESignature from "./components/ESignature.vue"
 
-const createName = ref("");
+const createTime = ref("");
+const signPic = ref("")
 </script>
 <template>
   <div :class="$style.container">
@@ -17,9 +20,11 @@ const createName = ref("");
       </div>
     </div>
     <Gap height="8" />
-    <div>本人签名：</div>
+    <!-- <div>本人签名：</div>
+    <ESignature /> -->
+    <ESignature />
     <Gap height="8" />
-    <FormDatePicker label="时间" name="createName" v-model="createName" />
+    <FormDatePicker label="时间" name="createTime" v-model="createTime" />
   </div>
 </template>
 <style module lang="less">
